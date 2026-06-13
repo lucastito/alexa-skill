@@ -1,0 +1,46 @@
+{
+    "manifest":  {
+                     "publishingInformation":  {
+                                                   "locales":  {
+                                                                   "pt-BR":  {
+                                                                                 "name":  "Autocuidado",
+                                                                                 "summary":  "Skill pessoal de autocuidado e rotina.",
+                                                                                 "description":  "Skill pessoal para organizar rotina, manter prioridades e reforcar autocuidado diario.",
+                                                                                 "examplePhrases":  [
+                                                                                                        "Alexa, abrir autocuidado",
+                                                                                                        "Alexa, pedir ao autocuidado o plano de hoje",
+                                                                                                        "Alexa, pedir ao autocuidado para concluir agua",
+                                                                                                        "Alexa, pedir ao autocuidado para registrar agua"
+                                                                                                    ],
+                                                                                 "keywords":  [
+                                                                                                  "rotina",
+                                                                                                  "autocuidado",
+                                                                                                  "foco",
+                                                                                                  "produtividade"
+                                                                                              ]
+                                                                             }
+                                                               },
+                                                   "isAvailableWorldwide":  false,
+                                                   "distributionCountries":  [
+                                                                                 "BR"
+                                                                             ],
+                                                   "testingInstructions":  "Skill pessoal para acompanhamento de rotina e foco diario."
+                                               },
+                     "apis":  {
+                                  "custom":  {
+                                                 "endpoint":  {
+                                                                  "uri":  "arn:aws:lambda:us-east-1:000000000000:function:autocuidado-skill"
+                                                              },
+                                                 "interfaces":  [
+
+                                                                ]
+                                             }
+                              },
+                     "permissions":  [
+                                         {
+                                             "name":  "alexa::alerts:reminders:skill:readwrite"
+                                         }
+                                     ],
+                     "manifestVersion":  "1.0"
+                 }
+}

@@ -1,0 +1,26 @@
+{
+  "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.SEUs-ID-AQUI",
+      "skillMetadata": {
+        "src": "skill-package"
+      },
+      "code": {
+        "default": {
+          "src": "lambda"
+        }
+      },
+      "test": [
+        "pt-BR"
+      ],
+      "deploy_settings": {
+        "default": {
+          "merge": "override",
+          "resource": {
+            "skillId": "amzn1.ask.skill.SEUs-ID-AQUI"
+          }
+        }
+      }
+    }
+  }
+}

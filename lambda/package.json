@@ -1,0 +1,20 @@
+{
+  "name": "lucas-autocuidado-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Skill Alexa de autocuidado para rotina diaria.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "audit": "npm audit --audit-level=low",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "3.1068.0",
+    "@aws-sdk/lib-dynamodb": "3.1068.0",
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-model": "^1.78.0"
+  }
+}

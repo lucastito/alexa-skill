@@ -1,0 +1,767 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "autocuidado",
+      "intents": [
+        {
+          "name": "PlanoHojeIntent",
+          "samples": [
+            "plano de hoje",
+            "meu plano de hoje",
+            "o que eu faço hoje",
+            "o que eu faco hoje",
+            "prioridades de hoje"
+          ]
+        },
+        {
+          "name": "ConcluirIntent",
+          "slots": [
+            {
+              "name": "tarefa",
+              "type": "TAREFA_TYPE"
+            }
+          ],
+          "samples": [
+            "concluir {tarefa}",
+            "concluir tarefa {tarefa}",
+            "finalizei {tarefa}",
+            "terminei {tarefa}",
+            "fiz {tarefa}"
+          ]
+        },
+        {
+          "name": "ConcluirTarefaLivreIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "concluir {tarefaLivre}",
+            "finalizei {tarefaLivre}",
+            "terminei {tarefaLivre}",
+            "fiz {tarefaLivre}",
+            "concluir tarefa {tarefaLivre}",
+            "finalizar tarefa {tarefaLivre}",
+            "terminei a tarefa {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "ConcluirCourseraIntent",
+          "samples": [
+            "concluir coursera",
+            "concluir curso coursera",
+            "concluir cursera",
+            "concluir curso cursera",
+            "terminei coursera",
+            "terminei curso coursera",
+            "terminei cursera",
+            "finalizei coursera",
+            "finalizei curso coursera"
+          ]
+        },
+        {
+          "name": "InformarProjetoIntent",
+          "slots": [
+            {
+              "name": "nomeProjeto",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "projeto {nomeProjeto}",
+            "foi o projeto {nomeProjeto}",
+            "trabalhei no projeto {nomeProjeto}"
+          ]
+        },
+        {
+          "name": "RegistrarAguaIntent",
+          "slots": [
+            {
+              "name": "quantidade",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unidade",
+              "type": "UNIDADE_AGUA_TYPE"
+            }
+          ],
+          "samples": [
+            "bebi {quantidade} {unidade}",
+            "bebi {quantidade} ml",
+            "foram {quantidade} {unidade} de água",
+            "foram {quantidade} {unidade} de agua",
+            "foram {quantidade} ml de agua",
+            "registrar água {quantidade} {unidade}",
+            "registrar agua {quantidade} {unidade}",
+            "registrar agua {quantidade} ml",
+            "registrar água",
+            "registrar agua",
+            "quero registrar água",
+            "quero registrar agua",
+            "anotar água",
+            "anotar agua",
+            "registrar minha água",
+            "registrar minha agua",
+            "no autocuidado registrar água",
+            "no autocuidado registrar agua"
+          ]
+        },
+        {
+          "name": "InformarQuantidadeAguaIntent",
+          "slots": [
+            {
+              "name": "quantidade",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unidade",
+              "type": "UNIDADE_AGUA_TYPE"
+            }
+          ],
+          "samples": [
+            "{quantidade} {unidade}",
+            "{quantidade} ml",
+            "foram {quantidade} {unidade}",
+            "foi {quantidade} {unidade}",
+            "bebi {quantidade} {unidade}",
+            "bebi {quantidade} ml"
+          ]
+        },
+        {
+          "name": "AdicionarTarefaIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "adicionar tarefa",
+            "cadastrar tarefa",
+            "adicionar tarefa {tarefaLivre}",
+            "cadastrar tarefa {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "AdicionarTarefaHojeIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "adicionar para hoje {tarefaLivre}",
+            "adicionar tarefa para hoje {tarefaLivre}",
+            "cadastrar para hoje {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "AdicionarTarefaSempreIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "adicionar tarefa permanente {tarefaLivre}",
+            "adicionar para sempre {tarefaLivre}",
+            "cadastrar tarefa fixa {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "InformarNomeNovaTarefaIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "nome {tarefaLivre}",
+            "tarefa {tarefaLivre}",
+            "o nome da tarefa e {tarefaLivre}",
+            "chama {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "InformarNomeNovaTarefaAtualizarIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "atualizar {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "CapturarTarefaLivreIntent",
+          "slots": [
+            {
+              "name": "tarefaLivre",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "estudar {tarefaLivre}",
+            "revisar {tarefaLivre}",
+            "fazer {tarefaLivre}",
+            "escrever {tarefaLivre}",
+            "treinar {tarefaLivre}",
+            "organizar {tarefaLivre}",
+            "resolver {tarefaLivre}"
+          ]
+        },
+        {
+          "name": "DefinirEscopoTarefaIntent",
+          "slots": [
+            {
+              "name": "escopo",
+              "type": "ESCOPO_TAREFA_TYPE"
+            }
+          ],
+          "samples": [
+            "{escopo}",
+            "para {escopo}",
+            "somente {escopo}",
+            "ela e {escopo}",
+            "escopo {escopo}"
+          ]
+        },
+        {
+          "name": "EscopoRecorrenteIntent",
+          "samples": [
+            "recorrente",
+            "sempre",
+            "permanente",
+            "fixa"
+          ]
+        },
+        {
+          "name": "EscopoHojeIntent",
+          "samples": [
+            "hoje",
+            "so hoje",
+            "pontual",
+            "apenas hoje"
+          ]
+        },
+        {
+          "name": "CheckInIntent",
+          "samples": [
+            "check in",
+            "como estou hoje",
+            "meu progresso",
+            "status do dia"
+          ]
+        },
+        {
+          "name": "StatusObrigatorioIntent",
+          "samples": [
+            "status obrigatorio",
+            "status obrigatório",
+            "itens obrigatorios",
+            "itens obrigatórios",
+            "o que falta do obrigatorio"
+          ]
+        },
+        {
+          "name": "BoaNoiteIntent",
+          "samples": [
+            "boa noite",
+            "encerrar o dia",
+            "finalizar meu dia"
+          ]
+        },
+        {
+          "name": "RotinaChanteIntent",
+          "samples": [
+            "rotina da xante",
+            "cuidados da xante",
+            "o que fazer com a xante"
+          ]
+        },
+        {
+          "name": "MotivacaoIntent",
+          "samples": [
+            "me motiva",
+            "motivação",
+            "motivacao",
+            "me dá um choque de realidade",
+            "me da um choque de realidade"
+          ]
+        },
+        {
+          "name": "AtivarLembretesIntent",
+          "samples": [
+            "ativar lembretes",
+            "ativar rotina de lembretes",
+            "ligar meus lembretes automáticos",
+            "ligar meus lembretes automaticos"
+          ]
+        },
+        {
+          "name": "VouSairIntent",
+          "samples": [
+            "vou sair",
+            "estou saindo",
+            "pausar rotina",
+            "ativar modo rua",
+            "ligar modo rua",
+            "modo rua"
+          ]
+        },
+        {
+          "name": "ChegueiIntent",
+          "samples": [
+            "cheguei",
+            "ja cheguei",
+            "cheguei em casa",
+            "estou em casa",
+            "ja estou em casa",
+            "voltei",
+            "voltei para casa",
+            "retomar rotina",
+            "desligar modo rua",
+            "desativar modo rua",
+            "sair do modo rua"
+          ]
+        },
+        {
+          "name": "StatusAguaIntent",
+          "samples": [
+            "quanto de agua ja bebi",
+            "quanto de agua eu ja bebi",
+            "status da agua",
+            "progresso da agua",
+            "meta de agua"
+          ]
+        },
+        {
+          "name": "ConfirmarLembreteIntent",
+          "slots": [
+            {
+              "name": "tipoLembrete",
+              "type": "TIPO_LEMBRETE_TYPE"
+            }
+          ],
+          "samples": [
+            "confirmar lembrete",
+            "confirmar lembrete {tipoLembrete}",
+            "entendi o lembrete",
+            "sim vamos que vamos"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "StatusNaoObrigatorioIntent",
+          "samples": [
+            "status nao obrigatorio",
+            "itens nao obrigatorios",
+            "o que falta das nao obrigatorias",
+            "pendencias nao obrigatorias",
+            "tarefas nao obrigatorias"
+          ]
+        },
+        {
+          "name": "ListarTodasTarefasIntent",
+          "samples": [
+            "listar todas as tarefas",
+            "listar tarefas",
+            "quais sao todas as tarefas",
+            "mostrar todas as tarefas",
+            "me diga todas as tarefas"
+          ]
+        },
+        {
+          "name": "AuditoriaIntent",
+          "samples": [
+            "auditoria",
+            "auditoria completa",
+            "auditoria de tarefas",
+            "resumo completo",
+            "status completo"
+          ]
+        },
+        {
+          "name": "AuditoriaPendentesIntent",
+          "samples": [
+            "auditoria pendentes",
+            "auditoria de pendentes",
+            "listar pendentes completos"
+          ]
+        },
+        {
+          "name": "AuditoriaConcluidasIntent",
+          "samples": [
+            "auditoria concluidas",
+            "auditoria de concluidas",
+            "listar concluidas completas"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "TAREFA_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "malhar",
+                "synonyms": [
+                  "treino",
+                  "academia"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "água",
+                "synonyms": [
+                  "agua",
+                  "beber água",
+                  "beber agua",
+                  "hidratar"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "xante",
+                "synonyms": [
+                  "chante",
+                  "cuidar da xante",
+                  "cuidar da chante"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "meditar com guias",
+                "synonyms": [
+                  "guias",
+                  "meditar e conversar com os guias"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "não comer besteira",
+                "synonyms": [
+                  "nao comer besteira",
+                  "besteira"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "curso coursera",
+                "synonyms": [
+                  "coursera",
+                  "curso da coursera",
+                  "aula coursera",
+                  "aulas coursera"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "curso tera"
+              }
+            },
+            {
+              "name": {
+                "value": "curso itaú",
+                "synonyms": [
+                  "curso itau",
+                  "itau"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "remédios",
+                "synonyms": [
+                  "remedios",
+                  "tomar remédios",
+                  "tomar remedios"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "escovar os dentes"
+              }
+            },
+            {
+              "name": {
+                "value": "aplicar pra vagas",
+                "synonyms": [
+                  "vagas"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "artigo linkedin",
+                "synonyms": [
+                  "linkedin",
+                  "artigo no linkedin",
+                  "escrever artigo linkedin",
+                  "escrever artigo no linkedin"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "livro estrategia criativa",
+                "synonyms": [
+                  "escrever livro estrategia criativa"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "livro de tecnicas de priorizacao",
+                "synonyms": [
+                  "livro de priorizacao",
+                  "livro priorizacao",
+                  "escrever livro priorizacao"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "livro de product manager tecnico",
+                "synonyms": [
+                  "livro pm tecnico",
+                  "escrever livro pm tecnico"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "meditar"
+              }
+            },
+            {
+              "name": {
+                "value": "skin care",
+                "synonyms": [
+                  "skincare"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "treinar entrevistas em ingles",
+                "synonyms": [
+                  "entrevistas em ingles"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "estudar frances",
+                "synonyms": [
+                  "frances"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "estudar italiano",
+                "synonyms": [
+                  "italiano"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "revisar backlog e lista de tarefas",
+                "synonyms": [
+                  "revisar backlog",
+                  "backlog"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "comprar frutas legumes e verduras",
+                "synonyms": [
+                  "frutas",
+                  "legumes",
+                  "verduras",
+                  "comprar frutas",
+                  "comprar legumes",
+                  "comprar verduras"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "cortar cabelo e fazer barba",
+                "synonyms": [
+                  "cabelo e barba",
+                  "cabelo",
+                  "barba"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "nadar"
+              }
+            },
+            {
+              "name": {
+                "value": "fazer jiu jitsu",
+                "synonyms": [
+                  "jiu jitsu"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "verificar vacinas atualizadas",
+                "synonyms": [
+                  "vacinas"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "projeto nutriflow",
+                "synonyms": [
+                  "nutriflow"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "projeto ensina brasil",
+                "synonyms": [
+                  "ensina brasil"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "outros projetos"
+              }
+            }
+          ]
+        },
+        {
+          "name": "UNIDADE_AGUA_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "mililitros",
+                "synonyms": [
+                  "ml",
+                  "mililitro"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ESCOPO_TAREFA_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "hoje",
+                "synonyms": [
+                  "so hoje",
+                  "pontual"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "recorrente",
+                "synonyms": [
+                  "sempre",
+                  "permanente",
+                  "fixa"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "TIPO_LEMBRETE_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "água",
+                "synonyms": [
+                  "agua",
+                  "hidratação",
+                  "hidratacao"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "besteira",
+                "synonyms": [
+                  "alimentação",
+                  "alimentacao"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "malhar",
+                "synonyms": [
+                  "treino"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "xante",
+                "synonyms": [
+                  "chante"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

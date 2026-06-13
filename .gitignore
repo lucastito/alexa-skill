@@ -1,0 +1,10 @@
+/ask-resources.json
+/.ask/
+/lambda/node_modules/
+/skill-package/skill.local.json
+
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
